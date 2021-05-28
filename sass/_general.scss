@@ -1,0 +1,101 @@
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-size: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    background: $color-multi;
+    color: $color-multi;
+}
+
+.container {
+    max-width: 918px;
+    margin: 5em auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.block {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+section {
+    width: 33.3%;
+    float: left;
+}
+
+section:nth-child(1) {
+    background: $color-back-orange;
+    a {
+        color: $color-back-orange;
+    }
+}
+section:nth-child(2) {
+    background: $color-back-darkCyan;
+    a {
+        color: $color-back-darkCyan;
+    }
+}
+section:nth-child(3) {
+    background: $color-back-veryDarkCyan;
+    a {
+        color: $color-back-veryDarkCyan;
+    }
+}
+
+.content {
+    padding: 15.4%;
+    padding-bottom: 20%;
+
+    h1 {
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.4em;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 15px;
+        color: $text-pargraph;
+        margin-bottom: 7em;
+    }
+
+    a {
+        padding: .6em 1.7em;
+        border: 2px solid $color-multi;
+        border-radius: 2em;
+        color: rgba(255, 255, 255, 0);
+        background: $color-multi;
+        transition: .3s ease;
+
+        &:hover,
+        &:focus {
+            background: none;
+            color: $color-multi;
+        }
+    }
+
+
+}
+
+@media  screen and ( max-width: 800px ) {
+    .container {
+        width: 306px;
+    }
+
+    .block {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        float: none;
+    }
+}

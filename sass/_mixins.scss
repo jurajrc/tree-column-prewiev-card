@@ -1,0 +1,52 @@
+//
+// mixins
+//////////////////////////////////
+
+
+@mixin box-sizing( $value ) {
+	-webkit-box-sizing: $value;
+	   -moz-box-sizing: $value;
+	 		box-sizing: $value;
+}
+
+@mixin container ( $width ) {
+	max-width: $width;
+	margin: 0 auto;
+}
+
+@mixin clearfix {
+	&:before,
+	&:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+
+
+
+@mixin button-color ( $value ) {
+	background: $value;
+	background: complementine ( $value 15%);
+
+}
+
+
+// BORDER-RADIUS S DEFAULTNOU HODNOTOU 6PX + VYPINANIE PODMIENKOU in _variables
+///////////////////////////////////////////////////////////////////////////////
+
+@mixin rounded ( $radius: em(6)) {
+	@if ( $enable-rounded ) {
+		border-radius: $radius;
+	}
+}
+
+
+// PREPOCET Z PX NA EM + AK MA RODIC INU HODNOTU
+////////////////////////////////////////////////
+
+@function em($size, $context: 16) {
+	@return ($size / $context) * 1em;
+}
+
+@mixin font-size ( $size ) {
+	font-size: ( $size / 16 ) + em;
+}
+
